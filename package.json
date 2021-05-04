@@ -1,0 +1,18 @@
+{
+  "name": "pricetracker",
+  "version": "1.0.0",
+  "description": "This is a price tracker of daraz sastdeal and other nepali website",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "puppeteer-core": "^8.0.0"
+  }
+}
