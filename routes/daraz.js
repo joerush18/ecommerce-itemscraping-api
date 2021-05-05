@@ -1,7 +1,7 @@
 const express = require("express");
-const { darazController } = require("../controllers/daraz");
+//const { darazController } = require("../controllers/daraz");
+const { darazController } = require("../scrapingController/daraz");
 const router = express.Router();
-
 router.get("/:itemname", darazController);
 
 module.exports = router;
