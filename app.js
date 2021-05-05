@@ -9,14 +9,15 @@ const morgan = require("morgan");
 env.config();
 
 app.use(morgan("dev"));
+
+app.use("/runsastodeal", routeSastodeal);
+app.use("/rundaraz", routeDaraz);
 app.use("/", (req, res, next) => {
   res.status(400).json({
     forDarz: " /rundaraz/<youitem>",
     forSastodeal: " /runsastodeal/<youritem>",
   });
 });
-app.use("/runsastodeal", routeSastodeal);
-app.use("/rundaraz", routeDaraz);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server running on port ${port} 🔥`));
