@@ -1,11 +1,10 @@
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppeteer");
 
 const startBrowser = async () => {
   let browser;
   try {
     console.log("Opening browser");
     browser = await puppeteer.launch({
-      executablePath: `C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe`,
       headless: true,
     });
   } catch (e) {

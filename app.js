@@ -13,5 +13,5 @@ app.use(morgan("dev"));
 app.use("/runsastodeal", routeSastodeal);
 app.use("/rundaraz", routeDaraz);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server running on port ${port} 🔥`));
