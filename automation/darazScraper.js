@@ -14,7 +14,7 @@ const darazscraperObject = {
     await page.keyboard.press("Enter");
     console.log("Search Completed");
     console.log("Getting Data.......");
-    await page.waitForNavigation();
+    await page.waitForNavigation({ waitUntil: "domcontentloaded" });
     await page.waitForSelector(".c1z9Ut > .c1_t2i >.c2prKC");
     let itemsList = await page.$$eval(
       ".c1z9Ut >.c1_t2i > .c2prKC",
