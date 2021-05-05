@@ -38,13 +38,13 @@ const sastoDealscraperObject = {
             const imageLink = el.querySelector("img.product-image-photo").src;
 
             details.push({
+              From: "Sasto Deal",
               id: id,
-              name: title,
-              oldprice: oldPrice,
-              newPrice: newPrice,
-              //discount: discount,
-              imageLink: imageLink,
-              descLink: descLink,
+              title,
+              oldPrice,
+              newPrice,
+              imageLink,
+              descLink,
             });
           }
         });

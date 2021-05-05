@@ -6,7 +6,7 @@ const startBrowser = async () => {
     console.log("Opening browser");
     browser = await puppeteer.launch({
       executablePath: `C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe`,
-      headless: false,
+      headless: true,
     });
   } catch (e) {
     console.log(`Couldn't open browser : ${e}`);
