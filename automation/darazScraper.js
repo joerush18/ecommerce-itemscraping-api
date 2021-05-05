@@ -2,10 +2,6 @@ const darazscraperObject = {
   url: "http://www.daraz.com.np",
   async scraper(browser, itemName) {
     let page = await browser.newPage();
-    await page.setViewport({
-      width: 1080,
-      height: 720,
-    });
     await page.setDefaultNavigationTimeout(0);
     console.log(`Navigating to ${this.url}...`);
     await page.goto(this.url);
