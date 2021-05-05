@@ -15,7 +15,7 @@ const darazscraperObject = {
     console.log("Search Completed");
     console.log("Getting Data.......");
     await page.waitForNavigation();
-    await page.waitForSelector(".c1z9Ut > .c1_t2i ");
+    await page.waitForSelector(".c1z9Ut > .c1_t2i >.c2prKC");
     let itemsList = await page.$$eval(
       ".c1z9Ut >.c1_t2i > .c2prKC",
       async (item) => {
@@ -27,7 +27,7 @@ const darazscraperObject = {
             const productId = el.getAttribute("data-item-id");
             const title = el.querySelector(".c16H9d > a").title;
             const price = el.querySelector(".c3gUW0 > span").textContent;
-            const imageLink = el.querySelector(".c1ZEkM").src;
+            //  const imageLink = el.querySelector("a > img.c1ZEkM").src;
             const desLink = el.querySelector(".cRjKsc > a").href;
 
             details.push({
@@ -35,7 +35,7 @@ const darazscraperObject = {
               id: productId,
               title,
               price,
-              imageLink,
+              // imageLink,
               desLink,
             });
           }

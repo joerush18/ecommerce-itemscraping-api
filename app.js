@@ -10,8 +10,9 @@ env.config();
 
 app.use(morgan("dev"));
 
-app.use("/runsastodeal", routeSastodeal);
 app.use("/rundaraz", routeDaraz);
+app.use("/runsastodeal", routeSastodeal);
+
 app.use("/", (req, res, next) => {
   res.status(400).json({
     forDarz: " /rundaraz/<youitem>",
